@@ -1,4 +1,3 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
@@ -11,7 +10,6 @@ import {
 import toast, { Toaster } from "react-hot-toast";
 import ProductProvider from "./context/productContext";
 import Navbar from "./scenes/navbar";
-import { BrowserRouter } from "react-router-dom";
 
 const queryClient = new QueryClient({
   queryCache: new QueryCache({

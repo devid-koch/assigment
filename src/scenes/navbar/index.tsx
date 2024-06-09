@@ -2,8 +2,7 @@ import { useContext, useState } from "react";
 import logo from "../../assets/logo.jpeg"
 import { MdOutlineShoppingCart } from "react-icons/md";
 import { ProductContext } from "../../context/productContext";
-type Props = {}
-const Navbar = (props: Props) => {
+const Navbar = () => {
     const { cart, setSearchQuery } = useContext(ProductContext);
     const [query, setQuery] = useState<string>('');
 
