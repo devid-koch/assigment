@@ -1,5 +1,5 @@
 
-const RatingStars = ({ rating }) => {
+const RatingStars = ({ rating }: any) => {
   // Generate filled stars based on rating
   const filledStars = Array.from({ length: Math.floor(rating) }, (_, index) => (
     <svg key={ index } className="w-5 h-5 fill-current text-gray-700" viewBox="0 0 24 24">
