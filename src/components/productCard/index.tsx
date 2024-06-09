@@ -1,6 +1,7 @@
 import React from "react";
 import { Product as ProductType } from "../../types/product";
 import AddToCartButton from "../ui/cartButton";
+import { Link } from "react-router-dom";
 
 
 
@@ -15,9 +16,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
     return (
         <div className="group my-10 flex w-full max-w-xs flex-col overflow-hidden border border-gray-100 bg-white shadow-md">
-            <a
+            <Link
+                to={ `/product-detail/${product.id}` }
                 className="relative flex h-56 overflow-hidden"
-                href="#"
             >
                 <img
                     className="absolute top-0 right-0 h-full w-full object-cover"
@@ -45,7 +46,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
                         </svg>
                     </button>
                 </div>
-            </a>
+            </Link>
             <div className="mt-4 px-5 pb-5">
                 <a href="#">
                     <h5 className="text-xl tracking-tight text-slate-900">

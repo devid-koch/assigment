@@ -6,6 +6,10 @@ import ShopSideNav from "../components/shopBy/ShopSideNav";
 export default function Home() {
   const { products } = useContext(ProductContext);
 
+  if (!products) {
+    return <div className="w-full flex items-center justify-center text-2xl py-28">Loading...</div>;
+  }
+
   return <div className="w-full flex items-center overflow-hidden">
     <div className="w-1/5 p-10">
       <ShopSideNav />

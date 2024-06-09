@@ -4,6 +4,7 @@ import { ProductContext } from '../../context/productContext';
 import { Product } from '../../types/product';
 import { useParams } from 'react-router';
 import RatingStars from '../ui/rating';
+import AddToCartButton from '../ui/cartButton';
 
 const ProductDetails: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -42,7 +43,7 @@ const ProductDetails: React.FC = () => {
                     </div>
                     <div className="flex item-center justify-between mt-3">
                         <h1 className="text-gray-700 font-bold text-xl">Rs: { product.price }</h1>
-                        <button className="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Add to Card</button>
+                        <AddToCartButton product={ product } />
                     </div>
                 </div>
             </div>
